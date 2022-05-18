@@ -12,6 +12,7 @@ root.render(
         :root {
           --white: #ffffff;
           --gray: hsla(0, 0%, 100%, 0.7);
+          --dark-gray: #1b1b1b;
           --blue: #1775e1;
           --black: #161616;
         }
@@ -44,18 +45,20 @@ root.render(
           color: #ffffff;
           padding: 18px 36px;
         }
+        button:hover {
+          box-shadow: inset 0 0 20px 20px rgb(0 0 0 / 10%);
+        }
         h1 {
-          font-size: 45px;
+          font-size: 50px;
           color: #ffffff;
           line-height: 100%;
-          font-weight: 1000;
+          font-weight: 700;
         }
         h2 {
           font-size: 25px;
           color: #ffffff;
           line-height: 110%;
           font-weight: 700;
-          margin-top: 96px;
         }
         h4 {
           margin-bottom: 26px;

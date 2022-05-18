@@ -9,7 +9,6 @@ const howItWorks = css`
   column-gap: 24px;
   margin: 60px 0;
   flex-wrap: wrap;
-  }
 `;
 const howItWorksReverse = css`
   display: flex;
@@ -19,7 +18,6 @@ const howItWorksReverse = css`
   margin: 60px 0;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  }
 `;
 const roundNumber = css`
   display: flex;
@@ -39,6 +37,7 @@ const roundNumber = css`
 const instruction = css`
   max-width: 541px;
   text-align: left;
+  margin: 20px;
   p {
     font-size: 20px;
   }
