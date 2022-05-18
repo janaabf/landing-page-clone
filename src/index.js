@@ -9,6 +9,12 @@ root.render(
   <React.StrictMode>
     <Global
       styles={css`
+        :root {
+          --white: #ffffff;
+          --gray: hsla(0, 0%, 100%, 0.7);
+          --blue: #1775e1;
+          --black: #161616;
+        }
         body {
           margin: auto;
           min-height: 100%;
@@ -17,7 +23,7 @@ root.render(
           background-color: #161616;
           font-family: Inter, sans-serif;
           color: hsla(0, 0%, 100%, 0.5);
-          font-size: 16px;
+          font-size: 15px;
           line-height: 24px;
           font-weight: 500;
         }
@@ -49,7 +55,7 @@ root.render(
           color: #ffffff;
           line-height: 110%;
           font-weight: 700;
-          margin: 96px 0px;
+          margin-top: 96px;
         }
         h4 {
           margin-bottom: 26px;

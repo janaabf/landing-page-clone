@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+import HowItWorks from './HowItWorks';
 
 // Styles Header
 
@@ -22,7 +23,7 @@ const navBar = css`
   margin: auto;
   padding: 0 3vw;
   position: fixed;
-  background-color: #161616;
+  background-color: var(--black);
   perspective: 500px;
   width: 100%;
 `;
@@ -71,6 +72,11 @@ const mainStyle = css`
   width: 100%;
   margin: auto;
   padding: 3vh;
+
+  a {
+    font-size: 16px;
+    font-weight: 600;
+  }
 `;
 
 const imgOne = css`
@@ -82,50 +88,14 @@ const imgOne = css`
 const mainParagraph = css`
   font-size: 25px;
   line-height: 110%;
-  color: hsla(0, 0%, 100%, 0.7);
+  color: var(--gray);
   font-weight: 500;
   margin-bottom: 24;
 `;
 
 const blackButton = css`
-  background-color: #161616;
+  background-color: var(--black);
   border: 2px solid hsla(0, 0%, 100%, 0.1);
-`;
-
-const howItWorks = css`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 48px;
-  column-gap: 24px;
-`;
-
-const roundNumber = css`
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 96px;
-  height: 96px;
-  border-radius: 60px;
-  background-color: #1775e1;
-  color: #ffffff;
-  margin: auto;
-  margin-bottom: 24px;
-  font-size: 40px;
-  font-weight: 600;
-`;
-const instruction = css`
-  max-width: 541px;
-  text-align: left;
-  @media screen and (max-width: 1313px) {
-    text-align: center;
-  }
-`;
-
-const imgInstruction = css`
-  border-radius: 12px;
 `;
 
 function App() {
@@ -213,7 +183,7 @@ function App() {
         </nav>
       </header>
       <main css={mainStyle}>
-        <div>
+        <div className="Title Section">
           <h1 c>Import CSV data into databases instantly</h1>
           <p css={mainParagraph}>
             Dropbase is an external data platform. Clean, validate, and import
@@ -233,40 +203,10 @@ function App() {
             css={imgOne}
           />
         </div>
-        <h2>How it Works</h2>
-        <div css={howItWorks}>
-          <div css={instruction}>
-            <h3 css={roundNumber}>1</h3>
-            <h4>Import and Request data seamlessly</h4>
-            <p>
-              Import and Request data from customers and partners faster than
-              ever. Automatically ingest data from CSVs and Excel files, clean,
-              and load them directly to your database - no manual work needed.
-              Never clean the same data twice.
-            </p>
-            <a
-              href="/import-and-request-data"
-              css={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              Learn how
-              <img
-                src="https://uploads-ssl.webflow.com/5f2c87246b17fcf662282594/5f2c87244e4a486e78b25cb2_icon-chevron-right.svg"
-                alt="Arrow right"
-              />
-            </a>
-          </div>
-          <div>
-            <img
-              src="https://uploads-ssl.webflow.com/5f2c87246b17fcf662282594/613018032ac5e7172d7e1ec2_Request%20data.svg"
-              width="700"
-              alt="Request data from external parties with Dropzone Data Requests by Dropbase"
-              css={imgInstruction}
-            />
-          </div>
+        <HowItWorks />
+        <div css={{ display: 'flex', justifyContent: 'center', gap: '24px' }}>
+          <button>Try Dropbase for Free</button>
+          <button css={blackButton}>Request Demo</button>
         </div>
       </main>
       <footer>footer</footer>
