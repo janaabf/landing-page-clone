@@ -63,7 +63,7 @@ export default function Header() {
       <nav css={navBar}>
         <ul css={navBlock1}>
           <li>
-            <a href="/">
+            <a href="https://www.dropbase.io/">
               <img
                 src="https://uploads-ssl.webflow.com/5f2c87246b17fcf662282594/6125a1fa1160592fd373d33b_Dropbase%20logo%20website.svg"
                 width="128"
